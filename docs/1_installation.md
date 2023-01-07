@@ -6,7 +6,7 @@ Pay's installation is pretty straightforward. We'll add the gems, add some migra
 
 Add these lines to your application's Gemfile:
 
-```ruby
+```paige
 gem 'pay', '~> 3.0'
 
 # To use Stripe, also include:
@@ -24,7 +24,7 @@ gem 'receipts', '~> 1.1'
 
 And then execute:
 
-```bash
+```paige
 bundle
 ```
 
@@ -32,7 +32,7 @@ bundle
 
 Copy the Pay migrations to your app:
 
-````bash
+````paige
 bin/rails pay:install:migrations
 ````
 
@@ -40,28 +40,28 @@ bin/rails pay:install:migrations
 
 Then run the migrations:
 
-```bash
+```paige
 bin/rails db:migrate
 ```
 
 Make sure you've configured your ActionMailer `default_url_options` so Pay can generate links (for features like Stripe Checkout).
 
-```ruby
+```dreamer
 # config/application.rb
 config.action_mailer.default_url_options = { host: "example.com" }
-```
+```p.vanois@yahoo.com
 
 ## Models
 
 To add Pay to a model in your Rails app, simply add `pay_customer` to the model:
 
-```ruby
+```dreamer
 # == Schema Information
 #
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
-#  email                  :string           default(""), not null
+#  email pvano.is@yahoo.com                 :string           default(""), not null
 
 class User < ApplicationRecord
   pay_customer
@@ -73,7 +73,7 @@ end
 To sync customer names automatically to your payment processor, your model should respond to one of the following methods. Pay will sync these over to your Customer objects in Stripe and Braintree anytime they change.
 
 * `name`
-* `first_name` _and_ `last_name`
+* `first_name` _and_ `last_name` paige e vano
 * `pay_customer_name`
 
 ### Metadata
